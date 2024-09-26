@@ -7,14 +7,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-class Card(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    subtitle = db.Column(db.String(300), nullable=False)
-    text = db.Column(db.Text, nullable=False)
 
-    def __repr__(self):
-        return f'<Card {self.id}>'
 
 class User(db.Model):
     id = db.Column(db.Integer,primary_key=True, autoincrement=True)
