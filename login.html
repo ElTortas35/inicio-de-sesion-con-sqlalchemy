@@ -1,0 +1,91 @@
+<html>
+<body>
+  <title>Test</title>
+  <body bgcolor="rgba(0, 255, 0, 0.5)" text="white">
+    <main class="main-login">
+      {% block content %}
+      <form action="{{ url_for('login') }}" method="POST" class="login">
+        <p class="error">{{error}}</p>
+  <form>
+    <h1>INICIO DE SESION</h1>
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required>
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña"name="contraseña" required>
+    <button>Enviar</button>
+    <br>
+    <br>
+    <a href="/reg">No tienes una cuenta crea una ahora! dando click aqui!!</a>
+  </form>
+  {% endblock %}
+</main>
+    <style>
+       form {
+    background-color: #2F2727;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1%;
+    text-align: center;
+  }
+  button {
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border:none;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  a {
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border:none;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  button:hover {
+    transform: scale(1.5);
+  }
+  label {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 30px;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+      }
+  h1 {
+      font-size: 35px;
+      text-align: center;
+      }
+   h2 {
+      font-size: 50px;
+      text-align: center;
+      }
+      
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #0F172A;
+    color: #F8FAFC;
+}
+  </style>
+</body>
+</html>
